@@ -35,6 +35,9 @@ const MyLineChart = () => {
     burpeeTotal += burpee.num;
   })
 
+  // Chart config
+  ChartJS.defaults.font.size = 15;
+
   return (
   <>
     <div className={style.container}>
@@ -62,7 +65,18 @@ const MyLineChart = () => {
               },
             ],
           }}
-          height="20%"
+          options = {{
+            plugins: {
+              legend: {
+                labels: {
+                  font: {
+                    size: 10 
+                  }
+                }
+              }
+            }
+          }}
+          height="60%"
           width="60%"
         />
       </div>
