@@ -1,6 +1,10 @@
 .container {
   height: fit-content;
   width: fit-content;
+  margin: auto;
+  position: relative;            
+  top: 50%;                      
+  transform: translate(0, -50%);
 }
 .header {
   color: var(--foreground-rgb);
@@ -10,5 +14,10 @@
   margin: auto;
   width: fit-content;
   text-align: center;
+}
+
+.header u {
+  font-size: 70px;
+  color: red;
 }
 

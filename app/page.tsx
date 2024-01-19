@@ -27,7 +27,7 @@ const MyLineChart = () => {
   
   data.burpees.forEach((burpee:any) => {
     burpeeDates.push(burpee.date);
-    burpeeNums.push(burpee.num);
+    burpeeNums.push(burpeeTotal + burpee.num);
     burpeeTotal += burpee.num;
   })
 
