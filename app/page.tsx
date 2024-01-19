@@ -32,29 +32,34 @@ const MyLineChart = () => {
   })
 
   return (
-  <div className={style.container}>
-    <h1 className={style.header}>
-      INSGESAMT WURDEN SCHON <br/>
-      <b><u>{burpeeTotal}</u></b> BURPEES <br/>
-      GEMACHT
-    </h1>
-    <div>
-      <Line
-        data={{
-          labels: burpeeDates,
-          datasets: [
-            {
-              data: burpeeNums,
-              backgroundColor: "white", 
-              borderColor: "white",
-            },
-          ],
-        }}
-        height="20%"
-        width="60%"
-      />
+  <>
+    <div className={style.container}>
+      <h1 className={style.header}>
+        INSGESAMT WURDEN SCHON <br/>
+        <b><u>{burpeeTotal}</u></b> BURPEES <br/>
+        GEMACHT
+      </h1>
+      <div>
+        <Line
+          data={{
+            labels: burpeeDates,
+            datasets: [
+              {
+                data: burpeeNums,
+                backgroundColor: "white", 
+                borderColor: "white",
+              },
+            ],
+          }}
+          height="20%"
+          width="60%"
+        />
+      </div>
     </div>
-  </div>
+    <div className={style.giturl}>
+      <a href="https://github.com/Svenum/burpee-counter" target="_blank">GitHub</a>
+    </div>
+  </>
   );
 };
 export default MyLineChart;

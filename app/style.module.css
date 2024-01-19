@@ -21,3 +21,10 @@
   color: red;
 }
 
+.giturl {
+    font-size: 15px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
