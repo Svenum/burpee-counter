@@ -1,0 +1,14 @@
+.container {
+  height: fit-content;
+  width: fit-content;
+}
+.header {
+  color: var(--foreground-rgb);
+  font-size: 50px;
+  font-weight: bold;
+  font-family: antihero;
+  margin: auto;
+  width: fit-content;
+  text-align: center;
+}
+
