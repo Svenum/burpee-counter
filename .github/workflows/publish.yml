@@ -17,7 +17,7 @@ jobs:
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: S.ziegler@holypenguin.net
+          accountId: ${{ secret.CLOUDFLARE_ACCOUNT_ID }}
           projectName: burpee-counter
           directory: ./.vercel/output/static
           # Optional: Enable this if you want to have GitHub Deployments triggered
