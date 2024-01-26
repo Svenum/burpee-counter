@@ -1,7 +1,7 @@
 .container {
   height: fit-content;
   width: fit-content;
-  margin: 50px auto;
+  margin: 0px auto;
 }
 .header {
   color: var(--foreground-rgb);

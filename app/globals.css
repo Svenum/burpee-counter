@@ -42,7 +42,7 @@ body {
     )
     rgb(var(--background-start-rgb));
   width: 100%;
-  padding: 5%;
+  padding: 40px;
 }
 
 @layer utilities {
