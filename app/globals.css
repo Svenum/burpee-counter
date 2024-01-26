@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: antihero;
-  src: url('../src/fonts/antihero.ttf');
+  src: url('../public/fonts/antihero.ttf');
 }
 
 /* Maybee later
@@ -25,6 +25,7 @@
   --foreground-rgb: white;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 10, 10, 10;
+  --font-antihero: antihero
 }
 
 html {

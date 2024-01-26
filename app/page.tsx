@@ -18,8 +18,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-import style from "./style.module.css";
-import { useState } from "react";
 
 export default function Page() {
   const buttonStyle = "bg-transparent text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-white rounded mr-2"
@@ -72,20 +70,20 @@ export default function Page() {
 
   return (
   <>
-    <div className={style.container}>
-      <h1 className={style.header}>
-        INSGESAMT WURDEN {year} SCHON <br/>
-        <b><u>{burpeeTotal}</u></b> BURPEES <br/>
+    <div className="h-fit max-lg:w-fit lg:w-1/3 mx-auto">
+      <h1 className="font-antihero text-5xl m-auto w-fit text-center mb-12">
+        INSGESAMT WURDEN <br/> {year} SCHON <br/>
+        <b><u className="text-[#ff0000]">{burpeeTotal}</u></b> BURPEES <br/>
         GEMACHT
       </h1>
       <div>
         <button className={buttonStyle}> 2022 </button>
         <button className={buttonStyle}> 2023 </button>
         <button className={buttonStyle}> 2024 </button>
-        <Line data={charData} options={charOptions} height="60%" width="60%"/>
+        <Line data={charData} options={charOptions} height="100%" width="100%"/>
       </div>
     </div>
-    <div className={style.giturl}>
+    <div className="text-sm absolute right-10 bottom-5">
       <a href="https://github.com/Svenum/burpee-counter" target="_blank">GitHub</a>
     </div>
   </>
