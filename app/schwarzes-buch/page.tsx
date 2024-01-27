@@ -24,7 +24,7 @@ export default function Page() {
           {
             workouts.map((item:Workouts) => (
               <tr key={item.name}>
-                <td className={cellStyle + " text-[#ff0000] text-center"}><b>{item.name}</b></td>
+                <td className={cellStyle + " text-[#ff0000] text-center"} id={item.name}><b>{item.name}</b></td>
                 <td className={cellStyle}><pre>{item.description}</pre></td>
               </tr>
             ))
