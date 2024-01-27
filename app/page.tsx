@@ -9,6 +9,7 @@ import {
   Legend,
 } from "chart.js";
 import {useState} from "react";
+import type {MouseEvent} from "react";
 import { Line } from "react-chartjs-2";
 // Register ChartJS components using ChartJS.register
 ChartJS.register(
@@ -21,10 +22,22 @@ ChartJS.register(
 );
 
 export default function Page() {
+  // Style
   const buttonStyle = "bg-transparent text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-white rounded mr-2"
-  const buttonStyleSelected = "bg-transparent text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-white rounded mr-2"
   
+  // Year
   const [year, setYear] = useState(new Date().getFullYear());
+  const yearArr = [];
+  for (let yearCounter = 2022; yearCounter <= new Date().getFullYear(); yearCounter++){
+    yearArr.push(yearCounter);
+  }
+
+  const changeYear = (event:MouseEvent) => {
+    const target = event.target as HTMLButtonElement;
+    setYear(Number(target.value));
+  };
+
+  // Burpees
   const burpees = require('../src/data/' + year + '/burpees.json');
   let burpeeDates:string[] = [];
   let burpeeNums:number[] = [];
@@ -38,10 +51,7 @@ export default function Page() {
     burpeeTotal += burpee.num;
   })
 
-  const changeYear = event => {
-    setYear(event.target.value);
-  };
-
+  // Chart
   const charData = {
             labels: burpeeDates,
             datasets: [
@@ -82,9 +92,9 @@ export default function Page() {
         GEMACHT
       </h1>
       <div>
-        <button className={buttonStyle} value="2022" onClick={changeYear}> 2022 </button>
-        <button className={buttonStyle} value="2023" onClick={changeYear}> 2023 </button>
-        <button className={buttonStyle} value="2024" onClick={changeYear}> 2024 </button>
+        {yearArr.map(item => (
+          <button key={item} className={buttonStyle} value={item} onClick={changeYear}> {item} </button>
+        ))}
         <Line data={charData} options={charOptions} height="100%" width="100%"/>
       </div>
     </div>

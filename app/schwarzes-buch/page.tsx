@@ -1,5 +1,10 @@
 import React from "react";
 
+type Workouts = {
+  name: string,
+  description: string
+}
+
 export default function Page() {
   const workouts = require("../../src/data/black_book.json");
 
@@ -14,7 +19,7 @@ export default function Page() {
             <th>Beschreibung</th>
           </tr>
           {
-            workouts.map((item) => (
+            workouts.map((item:Workouts) => (
               <tr key={item.name}>
                 <td>{item.name}</td>
                 <td><pre>{item.description}</pre></td>
