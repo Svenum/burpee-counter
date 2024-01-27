@@ -7,10 +7,11 @@ import {
   PointElement,
   LineElement,
   Legend,
+  ArcElement
 } from "chart.js";
 import {useState} from "react";
 import type {MouseEvent} from "react";
-import { Line } from "react-chartjs-2";
+import { Line, Doughnut } from "react-chartjs-2";
 // Register ChartJS components using ChartJS.register
 ChartJS.register(
   CategoryScale,
@@ -18,12 +19,14 @@ ChartJS.register(
   PointElement,
   LineElement,
   Tooltip,
-  Legend
+  Legend,
+  ArcElement
 );
 
 export default function Page() {
   // Style
-  const buttonStyle = "bg-transparent text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-white rounded mr-2"
+  const buttonStyle = "bg-transparent text-whtie font-semibold hover:text-[#ff0000] py-2 px-4 border border-white hover:border-[#ff0000] rounded mr-2"
+  const buttonStyleSelected = "bg-transparent text-[#ff0000] font-semibold py-2 px-4 border border-[#ff0000] rounded mr-2"
   
   // Year
   const [year, setYear] = useState(new Date().getFullYear());
@@ -37,6 +40,9 @@ export default function Page() {
     setYear(Number(target.value));
   };
 
+  const yearButton = yearArr.map(item => (
+    <button key={item} className={year != item ? buttonStyle : buttonStyleSelected} value={item} onClick={changeYear}> {item} </button>
+  ))
   // Burpees
   const burpees = require('../src/data/' + year + '/burpees.json');
   let burpeeDates:string[] = [];
@@ -49,10 +55,20 @@ export default function Page() {
     burpeeNumsTotal.push(burpeeTotal + burpee.num);
     burpeeNums.push(burpee.num);
     burpeeTotal += burpee.num;
-  })
+  });
+
+
+  // Workouts
+  const workouts = require("../src/data/" + year + "/workouts.json");
+  const workoutKinds = Object.keys(workouts);
+  let workoutKindsNum:number[] = [];
+
+  workoutKinds.forEach((kind:string) => {
+    workoutKindsNum.push(workouts[kind].length);
+  });
 
   // Chart
-  const charData = {
+  const burpeeCharData = {
             labels: burpeeDates,
             datasets: [
               {
@@ -69,7 +85,7 @@ export default function Page() {
               },
             ],
           };
-  const charOptions = {
+  const burpeeCharOptions = {
             plugins: {
               legend: {
                 labels: {
@@ -80,6 +96,29 @@ export default function Page() {
               }
             }
         }
+  const workoutsCharData = {
+            labels: workoutKinds,
+            datasets: [
+              {
+                label: "",
+                data: workoutKindsNum,
+                backgroundColor: [
+                  "#ff0000",
+                  "#ff4b2d",
+                  "#ff704f",
+                  "#ff8f70",
+                  "#ffac93",
+                  "#ffc8b6",
+                  "#ffe4da",
+                  "#ffffff"
+                ],
+                borderColor: [
+                  "black"
+                ],
+                borderWidth: 4 
+              }
+            ]
+          };
   // Chart config
   ChartJS.defaults.font.size = 15;
 
@@ -92,10 +131,10 @@ export default function Page() {
         GEMACHT
       </h1>
       <div>
-        {yearArr.map(item => (
-          <button key={item} className={buttonStyle} value={item} onClick={changeYear}> {item} </button>
-        ))}
-        <Line data={charData} options={charOptions} height="100%" width="100%"/>
+        {yearButton}
+        <Line className="mb-40" data={burpeeCharData} options={burpeeCharOptions} height="100%" width="100%"/>
+        {yearButton}
+        <Doughnut data={workoutsCharData}/>
       </div>
     </div>
     <div className="text-sm absolute right-10 bottom-5">
