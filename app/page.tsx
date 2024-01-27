@@ -69,58 +69,48 @@ export default function Page() {
 
   // Chart
   const burpeeCharData = {
-            labels: burpeeDates,
-            datasets: [
-              {
-                data: burpeeNumsTotal,
-                backgroundColor: "red", 
-                borderColor: "red",
-                label: "gesamt",
-              },
-              {
-                data: burpeeNums,
-                backgroundColor: "white", 
-                borderColor: "white",
-                label: "pro Tag",
-              },
-            ],
-          };
-  const burpeeCharOptions = {
-            plugins: {
-              legend: {
-                labels: {
-                  font: {
-                    size: 10 
-                  }
-                }
-              }
-            }
+    labels: burpeeDates,
+    datasets: [
+      {
+        data: burpeeNumsTotal,
+        backgroundColor: "red", 
+        borderColor: "red",
+        label: "gesamt",
+      },
+      {
+        data: burpeeNums,
+        backgroundColor: "white", 
+        borderColor: "white",
+        label: "pro Tag",
         }
+    ],
+  };
   const workoutsCharData = {
-            labels: workoutKinds,
-            datasets: [
-              {
-                label: "",
-                data: workoutKindsNum,
-                backgroundColor: [
-                  "#ff0000",
-                  "#ff4b2d",
-                  "#ff704f",
-                  "#ff8f70",
-                  "#ffac93",
-                  "#ffc8b6",
-                  "#ffe4da",
-                  "#ffffff"
-                ],
-                borderColor: [
-                  "black"
-                ],
-                borderWidth: 4 
-              }
-            ]
-          };
+    labels: workoutKinds,
+    datasets: [
+      {
+        label: "",
+        data: workoutKindsNum,
+        backgroundColor: [
+          "#ff0000",
+          "#ff4b2d",
+          "#ff704f",
+          "#ff8f70",
+          "#ffac93",
+          "#ffc8b6",
+          "#ffe4da",
+          "#ffffff"
+        ],
+        borderColor: [
+          "black"
+        ],
+        borderWidth: 4 
+      }
+    ]
+  };
   // Chart config
   ChartJS.defaults.font.size = 15;
+  ChartJS.defaults.borderColor = "black";
 
   return (
   <>
@@ -132,7 +122,7 @@ export default function Page() {
       </h1>
       <div>
         {yearButton}
-        <Line className="mb-12" data={burpeeCharData} options={burpeeCharOptions} height="100%" width="100%"/>
+        <Line className="mb-12" data={burpeeCharData} height="100%" width="100%"/>
         {yearButton}
         <Doughnut data={workoutsCharData}/>
       </div>
