@@ -132,7 +132,7 @@ export default function Page() {
       </h1>
       <div>
         {yearButton}
-        <Line className="mb-40" data={burpeeCharData} options={burpeeCharOptions} height="100%" width="100%"/>
+        <Line className="mb-12" data={burpeeCharData} options={burpeeCharOptions} height="100%" width="100%"/>
         {yearButton}
         <Doughnut data={workoutsCharData}/>
       </div>
