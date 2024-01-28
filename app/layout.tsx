@@ -48,7 +48,7 @@ export default function RootLayout({
               />
           </svg>
         </button>
-        <div className={`${active ? '' : 'hidden'} absolute top-0 left-0 border-solid border-white border-2 lg:w-1/6 h-full bg-gradient-to-t shadow-xl shadow-black from-background-start-rgb to-background-end-rgb m-0 p-0`}>
+        <div className={`${active ? '' : 'hidden'} absolute top-0 left-0 border-solid border-white border-2 lg:w-1/6 h-full z-50 bg-gradient-to-t shadow-xl shadow-black from-background-start-rgb to-background-end-rgb m-0 p-0`}>
           <button className={linkStyle} onClick={handleClick}>
             &#11164; Back
           </button>
