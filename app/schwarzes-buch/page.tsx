@@ -11,8 +11,7 @@ export default function Page() {
   const workouts = require("../../src/data/black_book.json");
 
   // Style
-  const cellStyle = "border-solid border-white border-2 p-4 text-xl";
-  const headerStyle = "max-lg:text-2xl lg:text-5xl text-[#ff0000] m-auto mb-12 font-antihero text-center";
+  const headerStyle = "max-lg:text-2xl lg:text-4xl text-[#ff0000] m-auto mb-12 font-antihero text-center";
   const pageStyle = (givenPageId:number) => {
     const defaultStyle = "absolute w-full h-full p-10 top-0 overflow-auto lg:text-xl";
     if (givenPageId != pageId) {
@@ -22,13 +21,12 @@ export default function Page() {
     }
   };
   const pageNumberStyle = "absolute bottom-0 right-0 mr-10 mb-7"
-  const dtStyle = "float-left w-[95%] overflow-hidden whitespace-nowrap after:content-['.............................................................................................................................']";
  
   // Page handling
   const maxPageId = workouts.length - 1;
   const [pageId, setPageId] = useState(0);
   const pageIdPlus = () => {
-    if (pageId + 1 <= maxPageId) {
+    if (pageId + 1 <= maxPageId + 2) {
       setPageId(pageId + 1);
     };
   };
@@ -55,16 +53,15 @@ export default function Page() {
           </div>
           <div id="1" className={pageStyle(1)}>
             <h1 className={headerStyle}>Inhaltsverzeichnis</h1>
-            <dl className="w-full">
             {
               workouts.map((item:Workouts, index:number) => (
-                <>
-                  <dt className={dtStyle}>{item.name}</dt>
-                  <dd className="float-right overflow-hidden bg-transparent relative bottom-[20px]">{index + 2}</dd>
-                </>
+                <div className="w-100 block flex" key={index}>
+                  <div className="inline-block flex-none">{item.name}</div>
+                  <div className="inline-block -translate-y-1.1.55 border-b-2 border-b-white border-dotted flex-auto"></div>
+                  <div className="inline-block flex-none">{index + 2}</div>
+                </div>
               ))
             }
-            </dl>
             <div className={pageNumberStyle}>1</div>
           </div>
           {
