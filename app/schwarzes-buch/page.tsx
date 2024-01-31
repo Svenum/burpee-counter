@@ -69,7 +69,7 @@ export default function Page() {
           </div>
           {
             workouts.map((item:Workouts, index:number) => (
-              <div key={item.name} id={index + 2} className={pageStyle(index + 2)}>
+              <div key={item.name} id={((index + 2) as unknown) as string} className={pageStyle(index + 2)}>
                 <h1 className={headerStyle} id={item.name}>{item.name}</h1>
                 <pre>{item.description}</pre>
                 <div className={pageNumberStyle}>{index + 2}</div>
