@@ -1,19 +1,72 @@
 [
   {
     "name": "Filthy 50",
-    "description": "50x Jump Squats\n50xJumping Pullups\n50x Kettlebell swings\n50x Ausfall Schritte\n50x Knee to Ellbows\n50x Kettle Bell Press\n50x Y-Rücken\n50x Goblin Squats\n50x Burpees\n50x Jumping Jacks"
+    "description": "",
+    "exercises": [
+      "50x Jump Squats",
+      "50xJumping Pullups",
+      "50x Kettlebell swings",
+      "50x Ausfall Schritte",
+      "50x Knee to Ellbows",
+      "50x Kettle Bell Press",
+      "50x Y-Rücken",
+      "50x Goblin Squats",
+      "50x Burpees",
+      "50x Jumping Jacks"
+    ]
   },
   {
     "name": "Mindgame",
-    "description": "Simple:\n50x (\n1x Burpees\n2x Liegestützen\n3x Kniebeugen\n4x Ausfallschritte\n5x Sit-Ups)\n\nAdvanced:\n50x (\n1x Navy Seals\n2x plyometrische Liegestützen\n3x plyometrische Kniebeugen\n4x Ausfallschritte (vor/zurück = 1)\n5x V-Ups)"
+    "description": "",
+    "exercises": [
+      "Simple (50x):",
+      "1x Burpees",
+      "2x Liegestützen",
+      "3x Kniebeugen",
+      "4x Ausfallschritte",
+      "5x Sit-Ups",
+      "Advanced (50x):",
+      "1x Navy Seals",
+      "2x plyometrische Liegestützen",
+      "3x plyometrische Kniebeugen",
+      "4x Ausfallschritte (vor/zurück = 1)",
+      "5x V-Ups"
+    ]
   },
   {
     "name": "Murph",
-    "description": "eine Meile laufen\n100x Klimzüge\n200x Liegestützen\n300x Kniebeugen\neine Meile laufen\nOptional mit Gewichtsweste"
+    "description": "",
+    "exercises": [
+      "eine Meile laufen",
+      "100x Klimzüge",
+      "200x Liegestützen",
+      "300x Kniebeugen",
+      "eine Meile laufen",
+      "Optional mit Gewichtsweste"
+    ]
   },
   {
     "name": "RFT",
-    "description": "Jeweils zwei Bahnen:\n- langsames Crawling\n- schelles Crawling\n- Crawling seitlich + Liegestütz alle paar Schritte\n- 1x Squat, 1x Sprung nach oben, 1x Sprung nach vorne\n- Gorilla\n- Burpeebahn\n- Ausfallschritt + Sprung nach vorne\n- Frösche\n- tiefe Sprünge\n- 3x hoch Springen, 3x tiefe Sprünge nach vorne\n- Entengang\n- Kniebeuge, Square, Sprung\n\nSonderbahnen:\n- weite Sprünge\n- Salamander\n- Schubkarre"
+    "description": "",
+    "exercises": [
+      "Jeweils zwei Bahnen:",
+      "langsames Crawling",
+      "schelles Crawling",
+      "Crawling seitlich + Liegestütz alle paar Schritte",
+      "1x Squat, 1x Sprung nach oben, 1x Sprung nach vorne",
+      "Gorilla",
+      "Burpeebahn",
+      "Ausfallschritt + Sprung nach vorne",
+      "Frösche",
+      "tiefe Sprünge",
+      "3x hoch Springen, 3x tiefe Sprünge nach vorne",
+      "Entengang",
+      "Kniebeuge, Square, Sprung",
+      "Sonderbahnen:",
+      "weite Sprünge",
+      "Salamander",
+      "Schubkarre"
+    ]
   }
 ]
 
