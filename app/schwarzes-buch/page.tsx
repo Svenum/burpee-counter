@@ -53,7 +53,7 @@ export default function Page() {
             </p>
           </div>
           <div id="1" className={pageStyle(1)}>
-            <h1 className={"max-lg:text-xl lg:text-4xl  " + headerStyle}>Inhaltsverzeichnis</h1>
+            <h1 className={"text-xl lg:text-4xl  " + headerStyle}>Inhaltsverzeichnis</h1>
             {
               workouts.map((item:Workouts, index:number) => (
                 <div className="w-100 block flex relative" key={index}>
