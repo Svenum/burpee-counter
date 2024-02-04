@@ -12,9 +12,9 @@ export default function Page() {
   const workouts = require("../../src/data/black_book.json");
 
   // Style
-  const headerStyle = "max-lg:text-2xl lg:text-4xl text-[#ff0000] m-auto mb-12 font-antihero text-center";
+  const headerStyle = "text-2xl lg:text-4xl text-[#ff0000] m-auto mb-12 font-antihero text-center";
   const pageStyle = (givenPageId:number) => {
-    const defaultStyle = "absolute w-full h-fit min-h-full max-lg:p-5 lg:p-10 top-0 overflow-auto max-lg:text-s lg:text-xl";
+    const defaultStyle = "absolute w-full h-fit min-h-full p-5 lg:p-10 top-0 overflow-auto text-s lg:text-xl";
     if (givenPageId != pageId) {
       return defaultStyle + " hidden";
     } else {
@@ -47,8 +47,8 @@ export default function Page() {
           <div className={(pageId != 0 ? "opacity-0" : "border-2 border-dashed opacity-10") + " relative float-left w-1/2 h-1/6 z-10 flex items-center"} onClick={pageIdMinus}><p className="w-full text-center text-5xl">&#10554;</p></div>
           <div className={(pageId != 0 ? "opacity-0" : "border-2 border-dashed opacity-10") + " relative float-right w-1/2 h-1/6 z-10 flex items-center scale-x-[-1]"} onClick={pageIdPlus}><p className="w-full text-center text-5xl">&#10554;</p></div>
           <div id="0" className={pageStyle(0)}>
-            <h1 className={"lg:pt-80 max-lg:pt-52 lg:text-4xl max-lg:text-2xl " + headerStyle}>Das Scharzes Buch</h1>
-              <p className="m-auto w-full text-center mt-5 max-lg:text-l lg:text-2xl font-antihero">
+            <h1 className={"lg:pt-80 pt-52 lg:text-4xl text-2xl " + headerStyle}>Das Scharzes Buch</h1>
+              <p className="m-auto w-full text-center mt-5 text-l lg:text-2xl font-antihero">
               Burpees? JA bitte!!!
             </p>
           </div>
