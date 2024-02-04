@@ -12,9 +12,9 @@ export default function Page() {
   const workouts = require("../../src/data/black_book.json");
 
   // Style
-  const headerStyle = "max-lg:text-xl lg:text-4xl text-[#ff0000] m-auto mb-12 font-antihero text-center";
+  const headerStyle = "max-lg:text-2xl lg:text-4xl text-[#ff0000] m-auto mb-12 font-antihero text-center";
   const pageStyle = (givenPageId:number) => {
-    const defaultStyle = "absolute w-full h-full p-10 top-0 overflow-auto max-lg:text-xs lg:text-xl";
+    const defaultStyle = "absolute w-full h-fit min-h-full max-lg:p-5 lg:p-10 top-0 overflow-auto max-lg:text-s lg:text-xl";
     if (givenPageId != pageId) {
       return defaultStyle + " hidden";
     } else {
@@ -43,7 +43,7 @@ export default function Page() {
   return(
     <>
       <div className="">
-        <div className="mt-10 m-auto border-solid border-2 border-white h-[80vh] lg:w-1/3 max-w-[80vw] relative">
+        <div className="mt-10 m-auto border-solid border-2 border-white h-[80vh] lg:w-1/3 max-w-[80vw] relative overflow-auto">
           <div className={(pageId != 0 ? "opacity-0" : "border-2 border-dashed opacity-10") + " relative float-left w-1/2 h-1/6 z-10 flex items-center"} onClick={pageIdMinus}><p className="w-full text-center text-5xl">&#10554;</p></div>
           <div className={(pageId != 0 ? "opacity-0" : "border-2 border-dashed opacity-10") + " relative float-right w-1/2 h-1/6 z-10 flex items-center scale-x-[-1]"} onClick={pageIdPlus}><p className="w-full text-center text-5xl">&#10554;</p></div>
           <div id="0" className={pageStyle(0)}>
@@ -53,7 +53,7 @@ export default function Page() {
             </p>
           </div>
           <div id="1" className={pageStyle(1)}>
-            <h1 className={headerStyle}>Inhaltsverzeichnis</h1>
+            <h1 className={"max-lg:text-xl lg:text-4xl  " + headerStyle}>Inhaltsverzeichnis</h1>
             {
               workouts.map((item:Workouts, index:number) => (
                 <div className="w-100 block flex relative" key={index}>
@@ -70,7 +70,7 @@ export default function Page() {
               <div key={item.name} id={((index + 2) as unknown) as string} className={pageStyle(index + 2)}>
                 <h1 className={headerStyle} id={item.name}>{item.name}</h1>
                 <p>{item.description}</p>
-                <ul className="list-outside list-disc">
+                <ul className="list-outside list-disc ml-5">
                   {item.exercises.map((exerciese:string) =>(
                     <li key={exerciese}>{exerciese}</li>
                   ))}
