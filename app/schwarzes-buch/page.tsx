@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
 import { useState } from "react";
+import type {MouseEvent} from "react";
 
 type Workouts = {
   name: string,
@@ -22,6 +23,7 @@ export default function Page() {
     }
   };
   const pageNumberStyle = "absolute bottom-0 right-0 mr-10 mb-7";
+  const backButtonStyle = "absolute bottom-0 left-0 ml-10 mb-7";
  
   // Page handling
   const maxPageId = workouts.length - 1;
@@ -36,16 +38,17 @@ export default function Page() {
       setPageId(pageId - 1);
     };
   };
+  const setPageIdTo = (event:MouseEvent) => {
+    const target = event.target as HTMLButtonElement; 
+    setPageId(Number(target.value));
+  };
 
-
-
-  console.log(workouts)
   return(
     <>
       <div className="">
         <div className="mt-10 m-auto border-solid border-2 border-white h-[80vh] lg:w-1/3 max-w-[80vw] relative overflow-auto">
-          <div className={(pageId != 0 ? "opacity-0" : "border-2 border-dashed opacity-10") + " relative float-left w-1/2 h-1/6 z-10 flex items-center"} onClick={pageIdMinus}><p className="w-full text-center text-5xl">&#10554;</p></div>
-          <div className={(pageId != 0 ? "opacity-0" : "border-2 border-dashed opacity-10") + " relative float-right w-1/2 h-1/6 z-10 flex items-center scale-x-[-1]"} onClick={pageIdPlus}><p className="w-full text-center text-5xl">&#10554;</p></div>
+          <div className={(pageId != 0 ? "opacity-0 backdrop-blur-md " : "opacity-20") + " hover:opacity-100 border-2 border-dashed relative float-left w-1/2 h-1/6 z-10 flex items-center"} onClick={pageIdMinus}><p className="w-full text-center text-5xl">&#10554;</p></div>
+          <div className={(pageId != 0 ? "opacity-0 backdrop-blur-md " : "opacity-20") + " hover:opacity-100 border-2 border-dashed relative float-right w-1/2 h-1/6 z-10 flex items-center scale-x-[-1]"} onClick={pageIdPlus}><p className="w-full text-center text-5xl">&#10554;</p></div>
           <div id="0" className={pageStyle(0)}>
             <h1 className={"lg:pt-80 pt-52 lg:text-4xl text-2xl " + headerStyle}>Das Scharzes Buch</h1>
               <p className="m-auto w-full text-center mt-5 text-l lg:text-2xl font-antihero">
@@ -56,11 +59,13 @@ export default function Page() {
             <h1 className={"text-xl lg:text-4xl  " + headerStyle}>Inhaltsverzeichnis</h1>
             {
               workouts.map((item:Workouts, index:number) => (
-                <div className="w-100 block flex relative" key={index}>
-                  <div className="inline-block flex-none">{item.name}</div>
-                  <div className="inline-block -translate-y-1.1.55 border-b-2 border-b-white border-dotted flex-auto"></div>
-                  <div className="inline-block flex-none">{index + 2}</div>
-                </div>
+                <button key={index} className="w-full h-fit" onClick={setPageIdTo} value={index + 2}>
+                  <div className="w-100 block flex relative pointer-events-none">
+                    <div className="inline-block flex-none">{item.name}</div>
+                    <div className="inline-block -translate-y-1.1.55 border-b-2 border-b-white border-dotted flex-auto"></div>
+                    <div className="inline-block flex-none">{index + 2}</div>
+                  </div>
+                </button>
               ))
             }
             <div className={pageNumberStyle}>1</div>
@@ -76,6 +81,7 @@ export default function Page() {
                   ))}
                 </ul>
                 <div className={pageNumberStyle}>{index + 2}</div>
+                <button className={backButtonStyle} onClick={setPageIdTo} value="1"> Zurück </button>
               </div>
             ))
           }
