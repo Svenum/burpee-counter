@@ -15,7 +15,7 @@ export default function Page() {
   // Style
   const headerStyle = "text-2xl lg:text-4xl text-[#ff0000] m-auto mb-12 font-antihero text-center h-auto";
   const pageStyle = (givenPageId:number) => {
-    const defaultStyle = "absolute w-full h-fit min-h-full p-5 lg:p-10 top-50 overflow-auto text-s lg:text-xl grid gap-0 grid-cols-1 grid-rows-[auto_1fr_auto]";
+    const defaultStyle = "absolute w-full h-fit min-h-full p-5 lg:p-10 top-50 overflow-auto text-s lg:text-xl grid gap-0 grid-cols-1 grid-rows-[16.6667%_1fr_auto]";
     if (givenPageId != pageId) {
       return defaultStyle + " hidden";
     } else {
