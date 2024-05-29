@@ -13,18 +13,19 @@ export default function Page() {
   const workouts = require("../../src/data/black_book.json");
 
   // Style
-  const headerStyle = "text-2xl lg:text-4xl text-[#ff0000] m-auto mb-12 font-antihero text-center";
+  const headerStyle = "text-2xl lg:text-4xl text-[#ff0000] m-auto mb-12 font-antihero text-center h-auto";
   const pageStyle = (givenPageId:number) => {
-    const defaultStyle = "absolute w-full h-fit min-h-full p-5 lg:p-10 top-50 overflow-auto text-s lg:text-xl";
+    const defaultStyle = "absolute w-full h-fit min-h-full p-5 lg:p-10 top-50 overflow-auto text-s lg:text-xl grid gap-0 grid-cols-1 grid-rows-[auto_1fr_auto]";
     if (givenPageId != pageId) {
       return defaultStyle + " hidden";
     } else {
       return defaultStyle;
     }
   };
-  const contentStyle = "mt-[95px]"
-  const pageNumberStyle = "absolute bottom-0 right-0 mr-10 mb-7";
-  const backButtonStyle = "absolute bottom-0 left-0 ml-10 mb-7";
+  const footerStyle = "lg:bottom-5 bottom-2 mb-7 mt-2 w-full left-0";
+  const contentStyle = "h-[1fr]"
+  const pageNumberStyle = "absolute right-5 block";
+  const backButtonStyle = "absolute left-5 block";
  
   // Page handling
   const maxPageId = workouts.length - 1;
@@ -62,20 +63,22 @@ export default function Page() {
               {
                 workouts.map((item:Workouts, index:number) => (
                   <button key={index} className="w-full h-fit" onClick={setPageIdTo} value={index + 2}>
-                    <div className="w-100 block flex relative pointer-events-none">
-                      <div className="inline-block flex-none">{item.name}</div>
-                      <div className="inline-block -translate-y-1.1.55 border-b-2 border-b-white border-dotted flex-auto"></div>
-                      <div className="inline-block flex-none">{index + 2}</div>
+                    <div className="pointer-events-none grid grid-cols-[auto_1fr_auto] mb-2">
+                      <div className="text-left">{item.name}</div>
+                      <div className=" -translate-y-1.1.55 border-b-2 border-b-white border-dotted"></div>
+                      <div className="text-right">{index + 2}</div>
                     </div>
                   </button>
                 ))
               }
             </div>
-            <div className={pageNumberStyle}>1</div>
+            <div className={footerStyle}>
+              <div className={pageNumberStyle}>1</div>
+            </div>
           </div>
           {
             workouts.map((item:Workouts, index:number) => (
-              <div key={item.name} id={((index + 2) as unknown) as string} className={pageStyle(index + 2)}>
+              <div key={item.name} id={((index + 2) as unknown) as string} className={pageStyle(index + 2) + ""}>
                 <h1 className={headerStyle} id={item.name}>{item.name}</h1>
                 <div className={contentStyle}>
                   <p>{item.description}</p>
@@ -84,6 +87,8 @@ export default function Page() {
                       <li key={exerciese}>{exerciese}</li>
                     ))}
                   </ul>
+                </div>
+                <div className={footerStyle}>
                   <div className={pageNumberStyle}>{index + 2}</div>
                   <button className={backButtonStyle} onClick={setPageIdTo} value="1"> Zurück </button>
                 </div>
