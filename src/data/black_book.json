@@ -4,7 +4,7 @@
     "description": "",
     "exercises": [
       "50x Jump Squats",
-      "50xJumping Pullups",
+      "50x Jumping Pullups",
       "50x Kettlebell swings",
       "50x Ausfall Schritte",
       "50x Knee to Ellbows",
@@ -16,16 +16,20 @@
     ]
   },
   {
-    "name": "Mindgame",
-    "description": "",
+    "name": "Mindgame (einfach)",
+    "description": "50 Runden:",
     "exercises": [
-      "Simple (50x):",
       "1x Burpees",
       "2x Liegestützen",
       "3x Kniebeugen",
       "4x Ausfallschritte",
-      "5x Sit-Ups",
-      "Advanced (50x):",
+      "5x Sit-Ups"
+    ]
+  },
+  {
+    "name": "Mindgame (schwer)",
+    "description": "50 Runden:",
+    "exercises": [
       "1x Navy Seals",
       "2x plyometrische Liegestützen",
       "3x plyometrische Kniebeugen",
@@ -34,7 +38,19 @@
     ]
   },
   {
-    "name": "Murph",
+    "name": "Murph (einfach)",
+    "description": "Alle Übungen außer das Laufen 20 Runden lang:",
+    "exercises": [
+      "eine Meile laufen",
+      "5x Klimzüge",
+      "10x Liegestützen",
+      "15x Kniebeugen",
+      "eine Meile laufen",
+      "Optional mit Gewichtsweste"
+    ]
+  },
+  {
+    "name": "Murph (schwer)",
     "description": "",
     "exercises": [
       "eine Meile laufen",
@@ -47,9 +63,8 @@
   },
   {
     "name": "RFT",
-    "description": "",
+    "description": "Jeweils zwei Bahnen:",
     "exercises": [
-      "Jeweils zwei Bahnen:",
       "langsames Crawling",
       "schelles Crawling",
       "Crawling seitlich + Liegestütz alle paar Schritte",
@@ -66,6 +81,31 @@
       "weite Sprünge",
       "Salamander",
       "Schubkarre"
+    ]
+  },
+  {
+    "name": "Burptacular",
+    "description": "Folgende Übungen 10-9-8-7-6-5-4-3-2-1 mal machen:",
+    "exercises": [
+      "Burpees",
+      "Kettlebell Thrusters",
+      "Burpees",
+      "Kettlebell Sumo Deadlift High-Pulls",
+      "Burpees",
+      "Kettlebell Swings"
+    ]
+  },
+  {
+    "name": "Kevin Spezial",
+    "description": "45min so viele Wiederholungen wie möglich:",
+    "exercises": [
+      "5x Klimzüge",
+      "10x Liegestützen",
+      "15x Kniebeugen",
+      "20x Hampelmänner",
+      "15x Sit-Ups",
+      "10 Burpees",
+      "5x Millitary Press"
     ]
   }
 ]
