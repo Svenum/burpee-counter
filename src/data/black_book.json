@@ -39,48 +39,45 @@
   },
   {
     "name": "Murph (einfach)",
-    "description": "Alle Übungen außer das Laufen 20 Runden lang:",
+    "description": "Alle Übungen außer das Laufen 20 Runden lang und optional mit Gewichtsweste:",
     "exercises": [
       "eine Meile laufen",
       "5x Klimzüge",
       "10x Liegestützen",
       "15x Kniebeugen",
-      "eine Meile laufen",
-      "Optional mit Gewichtsweste"
+      "eine Meile laufen"
     ]
   },
   {
     "name": "Murph (schwer)",
-    "description": "",
+    "description": "Optional mit Gewichtsweste:",
     "exercises": [
       "eine Meile laufen",
       "100x Klimzüge",
       "200x Liegestützen",
       "300x Kniebeugen",
-      "eine Meile laufen",
-      "Optional mit Gewichtsweste"
+      "eine Meile laufen"
     ]
   },
   {
     "name": "RFT",
-    "description": "Jeweils zwei Bahnen:",
+    "description": "Jeweils zwei Bahnen (ca. 8-10m):",
     "exercises": [
       "langsames Crawling",
       "schelles Crawling",
       "Crawling seitlich + Liegestütz alle paar Schritte",
-      "1x Squat, 1x Sprung nach oben, 1x Sprung nach vorne",
+      "1x Squat + 1x Sprung nach oben + 1x Sprung nach vorne",
       "Gorilla",
       "Burpeebahn",
       "Ausfallschritt + Sprung nach vorne",
       "Frösche",
       "tiefe Sprünge",
-      "3x hoch Springen, 3x tiefe Sprünge nach vorne",
+      "3x hoch Springen + 3x tiefe Sprünge nach vorne",
       "Entengang",
-      "Kniebeuge, Square, Sprung",
-      "Sonderbahnen:",
-      "weite Sprünge",
-      "Salamander",
-      "Schubkarre"
+      "Kniebeuge + Square + Sprung",
+      "(extra) weite Sprünge",
+      "(extra) Salamander",
+      "(extra) Schubkarre"
     ]
   },
   {
