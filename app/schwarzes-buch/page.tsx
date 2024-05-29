@@ -24,8 +24,8 @@ export default function Page() {
   };
   const footerStyle = "lg:bottom-5 bottom-2 mb-7 mt-2 w-full left-0";
   const contentStyle = "h-[1fr]"
-  const pageNumberStyle = "absolute right-5 block";
-  const backButtonStyle = "absolute left-5 block";
+  const pageNumberStyle = "absolute lg:right-10 right-7 block";
+  const backButtonStyle = "absolute lg:left-10 left-7 block";
  
   // Page handling
   const maxPageId = workouts.length - 1;
