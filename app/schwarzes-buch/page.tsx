@@ -52,7 +52,7 @@ export default function Page() {
           <div className={(pageId != 0 ? "opacity-0 backdrop-blur-md " : "opacity-20") + " hover:opacity-100 border-2 border-dashed relative float-left w-1/2 h-1/6 max-h-[150px] z-10 flex items-center"} onClick={pageIdMinus}><p className="w-full text-center text-5xl">&#10554;</p></div>
           <div className={(pageId != 0 ? "opacity-0 backdrop-blur-md " : "opacity-20") + " hover:opacity-100 border-2 border-dashed relative float-right w-1/2 h-1/6 max-h-[150px] z-10 flex items-center scale-x-[-1]"} onClick={pageIdPlus}><p className="w-full text-center text-5xl">&#10554;</p></div>
           <div id="0" className={pageStyle(0)}>
-            <h1 className={"lg:pt-80 pt-52 lg:text-4xl text-2xl " + headerStyle}>Das Scharzes Buch</h1>
+            <h1 className={"lg:pt-80 pt-52 lg:text-4xl text-2xl " + headerStyle}>Das Scharze Buch</h1>
               <p className="m-auto w-full text-center mt-5 text-l lg:text-2xl font-antihero">
               Burpees? JA bitte!!!
             </p>
