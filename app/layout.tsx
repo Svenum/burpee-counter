@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   // Style
-  const linkStyle = "w-full p-3 border-2 border-green border-solid block text-xl text-center hover:text-[#ff0000]"; 
+  const linkStyle = "w-full p-3 border-2 border-green border-solid block text-xl text-center hover:text-main"; 
 
   // Navbar
   const [active, setActive] = useState(false);

@@ -25,8 +25,8 @@ ChartJS.register(
 
 export default function Page() {
   // Style
-  const buttonStyle = "bg-transparent text-whtie font-semibold hover:text-[#ff0000] py-2 px-4 border border-white hover:border-[#ff0000] rounded mr-2"
-  const buttonStyleSelected = "bg-transparent text-[#ff0000] font-semibold py-2 px-4 border border-[#ff0000] rounded mr-2"
+  const buttonStyle = "bg-transparent text-whtie font-semibold hover:text-main py-2 px-4 border border-white hover:border-main rounded mr-2"
+  const buttonStyleSelected = "bg-transparent text-main font-semibold py-2 px-4 border border-main rounded mr-2"
   
   // Year
   const [year, setYear] = useState(new Date().getFullYear());
@@ -73,13 +73,13 @@ export default function Page() {
     datasets: [
       {
         data: burpeeNumsTotal,
-        backgroundColor: "red", 
-        borderColor: "red",
+        backgroundColor: "rgb(5, 5, 5)",
+        borderColor: "#f6be00",
         label: "gesamt",
       },
       {
         data: burpeeNums,
-        backgroundColor: "white", 
+        backgroundColor: "rgb(5, 5, 5)",
         borderColor: "white",
         label: "pro Tag",
         }
@@ -92,17 +92,22 @@ export default function Page() {
         label: "",
         data: workoutKindsNum,
         backgroundColor: [
-          "#ff0000",
-          "#ff4b2d",
-          "#ff704f",
-          "#ff8f70",
-          "#ffac93",
-          "#ffc8b6",
-          "#ffe4da",
-          "#ffffff"
+          "#f6be00",
+          "#fbbb29",
+          "#ffb83d",
+          "#ffb54e",
+          "#ffb45d",
+          "#ffb36b",
+          "#ffb278",
+          "#f19c68",
+          "#e28658",
+          "#d4704b",
+          "#c55a3e",
+          "#b54334",
+          "#a52a2a"
         ],
         borderColor: [
-          "black"
+          "rgb(5, 5, 5)"
         ],
         borderWidth: 4 
       }
@@ -117,7 +122,7 @@ export default function Page() {
     <div className="h-fit max-lg:w-fit lg:w-1/3 mx-auto">
       <h1 className="font-antihero text-5xl m-auto w-fit text-center mb-12">
         INSGESAMT WURDEN <br/> {year} SCHON <br/>
-        <b><u className="text-[#ff0000]">{burpeeTotal != 0 ? burpeeTotal : "???" }</u></b> BURPEES <br/>
+        <b><u className="text-main">{burpeeTotal != 0 ? burpeeTotal : "???" }</u></b> BURPEES <br/>
         GEMACHT
       </h1>
       <div>

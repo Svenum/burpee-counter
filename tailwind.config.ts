@@ -16,7 +16,9 @@ const config: Config = {
       colors: {
         "foreground-rgb": "var(--foreground-rgb)",
         "background-start-rgb": "rgb(var(--background-start-rgb))",
-        "background-end-rgb": "rgb(var(--background-end-rgb))"
+        "background-end-rgb": "rgb(var(--background-end-rgb))",
+        // Custom
+        "main": "#f6be00"
       },
       fontFamily: {
         antihero: ["var(--font-antihero)"]
