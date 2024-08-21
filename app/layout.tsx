@@ -1,12 +1,12 @@
 "use client"
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import style from "./navbar.module.css";
 import Link from "next/link";
 import { useState } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+import localFont from "next/font/local";
+const inter = localFont({src: '../public/fonts/Inter.ttf'});
 
 //export const metadata: Metadata = {
 //  title: "Burpees!!!",
