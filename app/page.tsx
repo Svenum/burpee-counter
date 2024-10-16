@@ -127,7 +127,8 @@ export default function Page() {
       </h1>
       <div>
         {yearButton}
-        <Line className="mb-12" data={burpeeCharData} height="100%" width="100%"/>
+        <Line data={burpeeCharData} height="100%" width="100%"/>
+        <div className="mb-12 italic font-12">Graf von Burpee</div>
         {yearButton}
         <Doughnut data={workoutsCharData}/>
       </div>
