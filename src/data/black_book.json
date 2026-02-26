@@ -129,6 +129,15 @@
       "100x Sit-Ups",
       "150x Kniebeugen"
     ]
+  },
+  {
+    "name": "Cooper",
+    "description": "10 RUnden, so schnell wie möglich:",
+    "exercises": [
+      "10x Burpees",
+      "10x Jump Squats",
+      "10x Push-Ups",
+      "10x Sit-Ups"
+    ]
   }
 ]
-
