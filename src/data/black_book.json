@@ -10,7 +10,7 @@
       "50x Knee to Ellbows",
       "50x Kettle Bell Press",
       "50x Y-Rücken",
-      "50x Goblin Squats",
+      "50x Goblet Squats",
       "50x Burpees",
       "50x Jumping Jacks"
     ]
@@ -138,6 +138,22 @@
       "10x Jump Squats",
       "10x Push-Ups",
       "10x Sit-Ups"
+    ]
+  },
+  {
+    "name": "Bauer",
+    "description": "",
+    "exercises": [
+      "2min Plank",
+      "15x Burpees",
+      "20x Kettlebell Swings",
+      "30x Push-Ups",
+      "50x Goblet Squats",
+      "50s Burpees",
+      "30x Kettlebell Swings",
+      "20x Push-Ups",
+      "10x Goblet Squats",
+      "2min Wallsit"
     ]
   }
 ]
