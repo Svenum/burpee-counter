@@ -99,7 +99,7 @@ export default function Page() {
             borderColor: "rgba(255, 0, 0, 0.5)",
             borderWidth: 3,
             label: {
-              content: "Durchscnitt pro Training",
+              content: "Durchscnitt pro Training: " + burpeeTotal / trainings,
               color: "white",
               display: (ctx: any) => ctx.hovered
             },
