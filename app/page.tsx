@@ -93,7 +93,7 @@ export default function Page() {
       annotation: {
         annotations: {
           line: {
-            type: "line",
+            type: "line" as const,
             yMin: burpeeTotal / trainings,
             yMax: burpeeTotal / trainings,
             borderColor: "rgba(255, 0, 0, 0.5)",
@@ -103,11 +103,11 @@ export default function Page() {
               color: "white",
               display: (ctx: any) => ctx.hovered
             },
-            enter(ctx, _event: any) {
+            enter(ctx: any, _event: any) {
               ctx.hovered = true
               ctx.chart.update()
             },
-            leave(ctx, _event: any) {
+            leave(ctx: any, _event: any) {
               ctx.hovered = false
               ctx.chart.update()
             }
