@@ -30,7 +30,9 @@
   "Lu's Leiter": [],
   "Fette Amy": [],
   "42min EMOM": [],
-  "Stationenlauf": [],
+  "Stationenlauf": [
+    "21.05"
+  ],
   "Lauf-Zirkel": [],
   "Filthy 50": [
     "29.01"
@@ -41,5 +43,8 @@
   ],
   "Bauer": [
     "12.03"
+  ],
+  "Burptacular": [
+    "07.05"
   ]
 }
